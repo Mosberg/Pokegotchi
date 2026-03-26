@@ -59,7 +59,15 @@
         </div>
       </details>
     </header>
+
     <main>
+      <aside>
+        <div id="party-ui" style="margin-bottom: 12px; display: none">
+          <h4>Your Party</h4>
+          <div id="party-list" style="display: flex; gap: 8px; flex-wrap: wrap"></div>
+          <button id="add-party-btn" style="margin-top: 6px">Add Pokémon to Party</button>
+        </div>
+      </aside>
       <section>
         <div id="save-slot-select" style="margin-bottom: 12px">
           <label for="save-slot-dropdown">Save Slot:</label>
@@ -70,11 +78,6 @@
           <label for="pokemon-dropdown">Choose your Pokémon:</label>
           <select id="pokemon-dropdown"></select>
           <button id="choose-pokemon-btn">Choose</button>
-        </div>
-        <div id="party-ui" style="margin-bottom: 12px; display: none">
-          <h4>Your Party</h4>
-          <div id="party-list" style="display: flex; gap: 8px; flex-wrap: wrap"></div>
-          <button id="add-party-btn" style="margin-top: 6px">Add Pokémon to Party</button>
         </div>
         <div id="pokegotchi-ui" style="display: none">
           <h3 id="pokemon-name"></h3>

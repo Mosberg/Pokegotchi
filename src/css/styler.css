@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  background-color: #f5f5f5;
+}
+
+/* Layout shell */
+
+header {
+  background-color: #ffcb05;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top: #000 4px solid;
+  border-left: #000 4px solid;
+  border-right: #000 4px solid;
+}
+
+header img {
+  max-height: 96px;
+}
+
+nav {
+  background-color: #3b4cca;
+  border-left: #000 4px solid;
+  border-right: #000 4px solid;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+nav button {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  background: #ffcb05;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background: #ffe066;
+}
+
+aside {
+  background-color: #ffcb05;
+  padding: 10px;
+  width: 200px;
+  float: left;
+  text-align: center;
+  border-left: #000 4px solid;
+  max-height: 100%;
+  margin: 0 auto;
+  height: 390px;
+}
+
+/* Party slots */
+
+.party-ui {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  max-height: 100%;
+}
+
+.party-slot {
+  background-color: #f5f5f5;
+  height: 96px;
+  width: 64px;
+  border: #000 2px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* Main game area */
+
+main#pokegotchi-ui {
+  background-color: #3b4cca;
+  padding: 20px;
+  margin-left: 200px;
+  border-right: #000 4px solid;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  color: #fff;
+}
+
+#pokegotchi-game {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-canvas {
+  background: #f5f5f5;
+  border: 4px solid #000;
+  border-radius: 12px;
+}
+
+#pokegotchi-info {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+#pokemon-types {
+  margin: 4px 0 8px;
+}
+
+#pokemon-description {
+  margin-bottom: 8px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+#status-message {
+  min-height: 20px;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+/* Controls */
+
+#pokegotchi-controls {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#pokegotchi-controls button {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  background: #ffcb05;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#pokegotchi-controls button:hover {
+  background: #ffe066;
+}
+
+footer {
+  background-color: #ffcb05;
+  padding: 10px;
+  text-align: center;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-left: #000 4px solid;
+  border-right: #000 4px solid;
+  border-bottom: #000 4px solid;
+}
+
+/* Simple responsiveness */
+
+@media (max-width: 768px) {
+  aside {
+    float: none;
+    width: 100%;
+    border-right: #000 4px solid;
+  }
+
+  main#pokegotchi-ui {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  #pokegotchi-info {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  #pokegotchi-controls {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}

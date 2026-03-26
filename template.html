@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pokegotchi</title>
+    <meta
+      name="description"
+      content="Pokegotchi is a virtual pet game where you can raise and take care of your own Pokemon. Feed, play, and watch your Pokemon grow!"
+    />
+    <meta name="author" content="Mosberg" />
+
+    <link rel="shortcut icon" href="src/img/favicon.webp" type="image/x-icon" />
+
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <header><img src="src/img/logo.png" alt="Pokegotchi Logo" /></header>
+    <nav>
+      <ul>
+        <button>New Game</button>
+        <button>Save Game</button>
+        <button>Load Game</button>
+        <button>Settings</button>
+      </ul>
+    </nav>
+    <aside>
+      <h2>Your Party</h2>
+      <div class="party-ui">
+        <div id="party-slot-1">Slot 1</div>
+        <div id="party-slot-2">Slot 2</div>
+        <div id="party-slot-3">Slot 3</div>
+        <div id="party-slot-4">Slot 4</div>
+        <div id="party-slot-5">Slot 5</div>
+        <div id="party-slot-6">Slot 6</div>
+      </div>
+    </aside>
+    <main id="pokegotchi-ui">
+      <section id="pokegotchi-game">
+        <canvas id="game-canvas"></canvas>
+      </section>
+      <section id="pokegotchi-controls">
+        <button id="feed-button">Feed</button>
+        <button id="play-button">Play</button>
+        <button id="clean-button">Clean</button>
+        <button id="sleep-button">Sleep</button>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Mosberg. All rights reserved.</p>
+    </footer>
+
+    <script src="src/js/settings.js"></script>
+    <script src="src/js/notifications.js"></script>
+    <script src="src/js/pokemon-data.js"></script>
+    <script src="src/js/pokegotchi.js"></script>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
