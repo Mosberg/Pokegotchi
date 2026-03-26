@@ -13,6 +13,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.**
 
+**Evolves into Ivysaur starting at level 16, which evolves into Venusaur starting at level 32.**
+
 # 2 - Ivysaur
 
 ![Ivysaur](src/img/pokemon/apng/normal/2.apng "Ivysaur") ![Ivysaur](src/img/pokemon/apng/shiny/2.apng "Ivysaur")
@@ -23,6 +25,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 **Types: <span style="color:green">Grass</span> & <span style="color:purple">Poison</span>**
 
 **To support its bulb, Ivysaur's legs grow sturdy. If it spends more time lying in the sunlight, the bud will soon bloom into a large flower.**
+
+**Evolves from Bulbasaur starting at level 16, which evolves into Venusaur starting at level 32.**
 
 # 3 - Venusaur
 
@@ -35,6 +39,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Venusaur's flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.**
 
+**Evolves from Ivysaur starting at level 32.**
+
 # 4 - Charmander
 
 ![Charmander](src/img/pokemon/apng/normal/4.apng "Charmander") ![Charmander](src/img/pokemon/apng/shiny/4.apng "Charmander")
@@ -45,6 +51,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 **Types: <span style="color:orange">Fire</span>**
 
 **The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is happy, and blazes when it is enraged.**
+
+**Evolves into Charmeleon starting at level 16, which evolves into Charizard starting at level 36.**
 
 # 5 - Charmeleon
 
@@ -57,6 +65,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Without pity, its sharp claws destroy foes. If it encounters a strong enemy, it becomes agitated, and the flame on its tail flares with a bluish white color.**
 
+**Evolves from Charmander starting at level 16, which evolves into Charizard starting at level 36.**
+
 # 6 - Charizard
 
 ![Charizard](src/img/pokemon/apng/normal/6.apng "Charizard") ![Charizard](src/img/pokemon/apng/shiny/6.apng "Charizard")
@@ -67,6 +77,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 **Types: <span style="color:orange">Fire</span> & <span style="color:#91b0ff">Flying</span>**
 
 **A Charizard flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe.**
+
+**Evolves from Charmeleon starting at level 36.**
 
 # 7 - Squirtle
 
@@ -79,6 +91,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Its shell is not just for protection. Its rounded shape and the grooves on its surface minimize resistance in water, enabling Squirtle to swim at high speeds.**
 
+**Evolves into Wartortle starting at level 16, which evolves into Blastoise starting at level 36.**
+
 # 8 - Wartortle
 
 ![Wartortle](src/img/pokemon/apng/normal/8.apng "Wartortle") ![Wartortle](src/img/pokemon/apng/shiny/8.apng "Wartortle")
@@ -90,6 +104,8 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Its large tail is covered with rich, thick fur that deepens in color with age. The scratches on its shell are evidence of this Pokémon's toughness in battle.**
 
+**Evolves from Squirtle starting at level 16, which evolves into Blastoise starting at level 36.**
+
 # 9 - Blastoise
 
 ![Blastoise](src/img/pokemon/apng/normal/9.apng "Blastoise") ![Blastoise](src/img/pokemon/apng/shiny/9.apng "Blastoise")
@@ -100,3 +116,5 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 **Types: <span style="color:skyblue">Water</span>**
 
 **The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet.**
+
+**Evolves from Wartortle starting at level 36.**

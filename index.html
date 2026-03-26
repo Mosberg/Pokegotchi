@@ -16,26 +16,97 @@
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
-    <header>
-      <h1><img src="src/img/logo.png" alt="Logo" class="logo" />Pokegotchi</h1>
+    <header style="display: flex; align-items: center; justify-content: space-between">
+      <h1 style="display: flex; align-items: center">
+        <img src="src/img/logo.png" alt="Logo" class="logo" />Pokegotchi
+      </h1>
+      <details id="settings-panel" style="margin-left: auto">
+        <summary style="cursor: pointer; font-size: 1.2em">⚙️ Settings</summary>
+        <div
+          style="
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-start;
+            min-width: 200px;
+          "
+        >
+          <label><input type="checkbox" id="setting-sound" /> Sound</label>
+          <label><input type="checkbox" id="setting-notifications" /> Notifications</label>
+          <label><input type="checkbox" id="setting-autosave" /> Autosave</label>
+          <label
+            >Autosave Interval:
+            <input
+              type="number"
+              id="setting-autosave-interval"
+              min="5"
+              max="300"
+              step="5"
+              style="width: 60px"
+            />
+            sec</label
+          >
+          <label
+            >Theme:
+            <select id="setting-theme">
+              <option value="auto">Auto</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+          <button id="settings-save-btn">Save Settings</button>
+        </div>
+      </details>
     </header>
     <main>
-      <section class="game-section">
-        <h2>Welcome to Pokegotchi!</h2>
-        <img src="src/img/pokemon/apng/normal/1.apng" alt="Bulbasaur" />
-        <img src="src/img/pokemon/apng/normal/4.apng" alt="Charmander" />
-        <img src="src/img/pokemon/apng/normal/7.apng" alt="Squirtle" />
-        <p>
-          In this virtual pet game, you can raise and take care of your own Pokemon. Feed, play, and
-          watch your Pokemon grow!
-        </p>
-        <button id="start-game-btn">Start Game</button>
+      <section>
+        <div id="pokemon-select">
+          <label for="pokemon-dropdown">Choose your Pokémon:</label>
+          <select id="pokemon-dropdown"></select>
+          <button id="choose-pokemon-btn">Choose</button>
+        </div>
+        <div id="pokegotchi-ui" style="display: none">
+          <h3 id="pokemon-name"></h3>
+          <div id="pokemon-types"></div>
+          <img id="pokemon-img" src="" alt="Your Pokémon" />
+          <!-- Shiny toggle removed: shiny is now random only -->
+          <div class="stats">
+            <div>
+              Level: <span id="level-value">5</span>
+              <span id="exp-bar" style="font-size: 0.9em"></span>
+            </div>
+            <div>Hunger: <span id="hunger-value">50</span></div>
+            <div>Happiness: <span id="happiness-value">50</span></div>
+            <div>Age: <span id="age-value">0</span></div>
+          </div>
+          <div class="actions">
+            <button id="train-btn">Train</button>
+          </div>
+          <div id="pokemon-description"></div>
+          <div class="actions">
+            <button id="feed-btn">Feed</button>
+            <button id="play-btn">Play</button>
+            <button id="evolve-btn" style="display: none">Evolve</button>
+            <button id="save-btn">Save</button>
+            <button id="load-btn">Load</button>
+          </div>
+          <div id="status-message"></div>
+        </div>
       </section>
+      <p>
+        In this virtual pet game, you can raise and take care of your own Pokémon. Feed, play, and
+        watch your Pokémon grow!
+      </p>
     </main>
     <footer>
       <p>&copy; 2026 Mosberg. All rights reserved.</p>
     </footer>
 
+    <script src="src/js/settings.js"></script>
+    <script src="src/js/notifications.js"></script>
+    <script src="src/js/pokemon-data.js"></script>
+    <script src="src/js/pokegotchi.js"></script>
     <script src="src/js/script.js"></script>
   </body>
 </html>
