@@ -1,16 +1,21 @@
-// pokegotchi.js
-// Core logic for Pokegotchi game
+// pokegotchi.js — Optimized pet lifecycle and stat system
 
 class Pokegotchi {
+  static UPDATE_INTERVAL_MS = 3000;
+  static HUNGER_RATE = 5;
+  static HAPPINESS_DECAY = 3;
+
   constructor(pokemon) {
-    this.pokemon = pokemon;
-    this.hunger = 50; // 0-100
-    this.happiness = 50; // 0-100
-    this.age = 0;
-    this.level = 5;
-    this.exp = 0;
-    this.isAlive = true;
-    this.interval = null;
+    Object.assign(this, {
+      pokemon,
+      hunger: 50,
+      happiness: 50,
+      age: 0,
+      level: 5,
+      exp: 0,
+      isAlive: true,
+      _tickInterval: null
+    });
   }
 
   feed() {
@@ -28,8 +33,8 @@ class Pokegotchi {
 
   train() {
     if (!this.isAlive) return;
+    this.hunger = Math.min(100, this.hunger + 5);
     this.happiness = Math.max(0, this.happiness - 5);
-    this.hunger = Math.min(100, this.hunger + 15);
     this.gainExp(20);
   }
 
@@ -47,26 +52,31 @@ class Pokegotchi {
 
   passTime() {
     if (!this.isAlive) return;
-    this.hunger = Math.min(100, this.hunger + 5);
-    this.happiness = Math.max(0, this.happiness - 3);
-    this.age += 1;
-    if (this.hunger >= 100 || this.happiness <= 0) {
-      this.isAlive = false;
-    }
+    this.hunger = Math.min(100, this.hunger + Pokegotchi.HUNGER_RATE);
+    this.happiness = Math.max(0, this.happiness - Pokegotchi.HAPPINESS_DECAY);
+    this.age++;
+    if (this.hunger >= 100 || this.happiness <= 0) this.die();
+  }
+
+  die() {
+    this.isAlive = false;
+    this.stopLife();
   }
 
   startLife(onUpdate) {
-    this.interval = setInterval(() => {
+    this.stopLife();
+    this._tickInterval = setInterval(() => {
       this.passTime();
-      onUpdate();
-      if (!this.isAlive) clearInterval(this.interval);
-    }, 3000);
+      onUpdate?.();
+    }, Pokegotchi.UPDATE_INTERVAL_MS);
   }
 
   stopLife() {
-    if (this.interval) clearInterval(this.interval);
+    if (this._tickInterval) {
+      clearInterval(this._tickInterval);
+      this._tickInterval = null;
+    }
   }
 }
 
-// Export for use in script.js
 window.Pokegotchi = Pokegotchi;

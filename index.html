@@ -61,10 +61,20 @@
     </header>
     <main>
       <section>
+        <div id="save-slot-select" style="margin-bottom: 12px">
+          <label for="save-slot-dropdown">Save Slot:</label>
+          <select id="save-slot-dropdown"></select>
+          <button id="load-slot-btn">Load</button>
+        </div>
         <div id="pokemon-select">
           <label for="pokemon-dropdown">Choose your Pokémon:</label>
           <select id="pokemon-dropdown"></select>
           <button id="choose-pokemon-btn">Choose</button>
+        </div>
+        <div id="party-ui" style="margin-bottom: 12px; display: none">
+          <h4>Your Party</h4>
+          <div id="party-list" style="display: flex; gap: 8px; flex-wrap: wrap"></div>
+          <button id="add-party-btn" style="margin-top: 6px">Add Pokémon to Party</button>
         </div>
         <div id="pokegotchi-ui" style="display: none">
           <h3 id="pokemon-name"></h3>
@@ -99,8 +109,21 @@
         watch your Pokémon grow!
       </p>
     </main>
-    <footer>
-      <p>&copy; 2026 Mosberg. All rights reserved.</p>
+    <footer style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+      <button
+        id="new-game-btn"
+        style="
+          font-size: 1em;
+          padding: 6px 18px;
+          border-radius: 8px;
+          background: #e0e0e0;
+          color: #333;
+          font-weight: bold;
+        "
+      >
+        New Game
+      </button>
+      <p style="margin: 0">&copy; 2026 Mosberg. All rights reserved.</p>
     </footer>
 
     <script src="src/js/settings.js"></script>

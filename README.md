@@ -2,7 +2,7 @@
 
 This project is a simple Pokegotchi game built using html, css and js. It features the original 1-9 first-generation Pokémon so far, each with their own unique animations and types. The game allows players to interact with their Pokémon, feed them, and watch them grow.
 
-# 1 - Bulbasaur
+# 1 - Bulbasaur - Starter Pokémon
 
 ![Bulbasaur](src/img/pokemon/apng/normal/1.apng "Bulbasaur") ![Bulbasaur](src/img/pokemon/apng/shiny/1.apng "Bulbasaur")
 **Bulbasaur**
@@ -41,7 +41,7 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Evolves from Ivysaur starting at level 32.**
 
-# 4 - Charmander
+# 4 - Charmander - Starter Pokémon
 
 ![Charmander](src/img/pokemon/apng/normal/4.apng "Charmander") ![Charmander](src/img/pokemon/apng/shiny/4.apng "Charmander")
 **Charmander**
@@ -80,7 +80,7 @@ This project is a simple Pokegotchi game built using html, css and js. It featur
 
 **Evolves from Charmeleon starting at level 36.**
 
-# 7 - Squirtle
+# 7 - Squirtle - Starter Pokémon
 
 ![Squirtle](src/img/pokemon/apng/normal/7.apng "Squirtle") ![Squirtle](src/img/pokemon/apng/shiny/7.apng "Squirtle")
 **Squirtle**
